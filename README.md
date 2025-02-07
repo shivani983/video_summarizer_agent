@@ -18,32 +18,27 @@ pip install -r requirements.txt
 ## 🛠 Installation & Setup  
 
 ### 1️⃣ Clone the Repository  
-```sh
 git clone https://github.com/your-username/video-summarizer-agent.git
 cd video-summarizer-agent
 
-
-2️⃣ Create and Activate a Virtual Environment
+###2️⃣ Create and Activate a Virtual Environment
 Using Conda:
 
 conda create -n agentdemo python=3.11 -y
 conda activate agentdemo
 
 
-3️⃣ Install Dependencies
+### 3️⃣ Install Dependencies
 pip install -r requirements.txt
 
-4️⃣ Set Up API Key
+### 4️⃣ Set Up API Key
 Create a .env file in the project directory and add your Google API Key:
 GOOGLE_API_KEY=your_api_key_here
 
 
-🚀 Running the Application
-streamlit run main.py
+### 🖼 UI Preview
 
-🖼 UI Preview
-
-🤖 Technologies Used
+##### 🤖 Technologies Used
 Streamlit – For UI
 Google Gemini API – For AI-powered video analysis
 DuckDuckGo Tool – For additional information retrieval
@@ -53,5 +48,6 @@ If you face issues with dependencies, try reinstalling them:
 
 pip install --upgrade -r requirements.txt
 If the API key is invalid, double-check your .env file.
-📜 License
+#### 📜 License
 This project is licensed under the MIT License.
+```sh
