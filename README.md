@@ -1,8 +1,4 @@
-conda create -n agentdemo python=3.11 -y
 
-conda activate agentdemo
-
-pip install -r requirements.txt
 
 # 🎥 Video Summarizer Agent  
 🚀 AI-powered agent that analyzes videos and provides key insights using **Google Gemini** and **Streamlit**.
