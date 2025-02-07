@@ -17,7 +17,7 @@
 git clone https://github.com/your-username/video-summarizer-agent.git
 cd video-summarizer-agent
 
-###2️⃣ Create and Activate a Virtual Environment
+### 2️⃣ Create and Activate a Virtual Environment
 Using Conda:
 
 conda create -n agentdemo python=3.11 -y
@@ -31,6 +31,8 @@ pip install -r requirements.txt
 Create a .env file in the project directory and add your Google API Key:
 GOOGLE_API_KEY=your_api_key_here
 
+### 🚀 Running the Application
+streamlit run main.py
 
 ### 🖼 UI Preview
 
@@ -39,7 +41,7 @@ Streamlit – For UI
 Google Gemini API – For AI-powered video analysis
 DuckDuckGo Tool – For additional information retrieval
 Python 3.11 – Core programming language
-🛠 Troubleshooting
+### 🛠 Troubleshooting
 If you face issues with dependencies, try reinstalling them:
 
 pip install --upgrade -r requirements.txt

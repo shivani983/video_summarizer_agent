@@ -51,7 +51,7 @@ if video_file:
         temp_video.write(video_file.read())
         video_path = temp_video.name
 
-    st.video(video_path, format = "video/mp4", start_time = 0)
+    st.video(video_path,format = "video/mp4", start_time = 0)
 
     user_query = st.text_area(
         "What key insights are you hoping to uncover from this video?",
@@ -71,16 +71,19 @@ if video_file:
                         processed_video = get_file(processed_video.name)
 
 
-                        analysis_prompt = (
+                    analysis_prompt = (
                             f""""Analyze the provided video and extract key insights based on the {user_query}. 
                             Summarize important topics, detect relevant entities, and provide clear, concise responses.
                             Ensure accuracy and relevance to the query while maintaining a user-friendly explanation."""
                         )
 
-                        response = multimodel_agent.run(analysis_prompt, videos=[processed_video])
+                    response = multimodel_agent.run(analysis_prompt, videos=[processed_video])
 
-                    st.subheader("Analysis Result")
-                    st.markdown(response.content)
+                    if response:
+                        st.subheader("Analysis Result")
+                        st.markdown(response.content)
+                    else:
+                        st.error("Analysis failed. No valid response received.")
 
             except Exception as error:
                 st.error(f" An error occurred during analysis: {error}")
@@ -93,11 +96,15 @@ if video_file:
 st.markdown(
     """
     <style>
-    .stTexaArea textarea{
-    height: 100px;
+    .video-frame {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        border: 2px solid black;
+        border-radius: 10px;
     }
     </style>
-    """,
-    unsafe_allow_html = True
+    """, 
+    unsafe_allow_html=True
 )
 
